@@ -1,31 +1,95 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Cat Crypto</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Cat</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1a1a2e, #16213e);
+            color: white;
+            overflow-x: hidden;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero {
+            position: relative;
+        }
+        .hero img {
+            width: 300px;
+            animation: breathe 3s infinite;
+        }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .eye-flame {
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            background: rgba(0, 183, 255, 0.8);
+            animation: flame 1s infinite;
+            border-radius: 50%;
+        }
+        .eye-flame.left {
+            top: 120px;
+            left: 105px;
+        }
+        .eye-flame.right {
+            top: 120px;
+            right: 105px;
+        }
+        @keyframes flame {
+            0%, 100% { opacity: 0.7; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.2); }
+        }
+        .contacts, .news {
+            text-align: center;
+        }
+        .news {
+            overflow-x: scroll;
+            display: flex;
+            gap: 20px;
+            padding: 10px;
+        }
+        .news div {
+            min-width: 300px;
+            height: 200px;
+            background: #283046;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="left">
-      <h1>Cyber Cat Crypto</h1>
-      <p>Всё о криптокотиках в мире блокчейна. Следи за трендами вместе с нами!</p>
-    </div>
-    <div class="center">
-      <h2>Контакты</h2>
-      <ul>
-        <li><strong>Телеграм:</strong> @CyberCat</li>
-        <li><strong>ВКонтакте:</strong> vk.com/CyberCat</li>
-        <li><strong>Email:</strong> info@cybercatcrypto.com</li>
-      </ul>
-    </div>
-    <div class="right">
-      <h2>Топ-проекты</h2>
-      <div class="cube"></div>
-      <div class="cube"></div>
-      <div class="cube"></div>
-    </div>
-  </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="./ВАШЕ_ИЗОБРАЖЕНИЕ.png" alt="Cyber Cat">
+        <div class="eye-flame left"></div>
+        <div class="eye-flame right"></div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts">
+        <h1>Контакты</h1>
+        <p>Телефон: +79991234567</p>
+        <p>Email: cybercat@crypto.com</p>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div>Новость 1</div>
+        <div>Новость 2</div>
+        <div>Новость 3</div>
+        <div>Новость 4</div>
+    </section>
 </body>
 </html>
